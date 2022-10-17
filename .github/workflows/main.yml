@@ -9,12 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.5.1
         with:
           node-version: 16.16.0
+      
       - name: Instalação do Mocha para teste
         run: |
           cd src;
           npm install -g mocha;
           npm install
+      
+      - name: Execução do teste convert
+        run: mocha src/test/convert.js
