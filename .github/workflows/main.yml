@@ -37,5 +37,5 @@ jobs:
           file: src/Dockerfile
           push: true
           tags: |
-            thndg1/aula-conversao-temperatura:v1
+            thndg1/aula-conversao-temperatura:${{github.run_number}}
             thndg1/aula-conversao-temperatura:latest
